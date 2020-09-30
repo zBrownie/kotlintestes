@@ -3,4 +3,5 @@
     <string name="counter">Counter</string>
     <string name="incrementar">Incrementar</string>
     <string name="pokemoapi">Pokemon Api</string>
+    <string name="selected_pokemon">Pokemon Selecionado</string>
 </resources>

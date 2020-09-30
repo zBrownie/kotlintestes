@@ -37,8 +37,8 @@ class MyAdapter(private val myDataSet: List<Pokemon>) : RecyclerView.Adapter<MyA
         }
 
         override fun onClick(v: View?) {
-            myDataSet[adapterPosition]
-            Toast.makeText(v?.context,"ITEM CLICADO: $adapterPosition",Toast.LENGTH_SHORT).show()
+
+            Toast.makeText(v?.context,"ITEM CLICADO: ${myDataSet[adapterPosition].url}",Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -19,7 +19,7 @@ class ActivityPokemonModel(private val presenter: ActivityPokemonInterface.Prese
 
 
         val endpoint = retrofitClient.create(Endpoint::class.java)
-        val callback = endpoint.getPokemon()
+        val callback = endpoint.getPokemon(name = "ditto")
 
 
         callback.enqueue(object : Callback<ResponsePokemon> {
@@ -29,6 +29,7 @@ class ActivityPokemonModel(private val presenter: ActivityPokemonInterface.Prese
             }
 
             override fun onResponse(call: Call<ResponsePokemon>, response: Response<ResponsePokemon>) {
+                Log.d("TAG_APIPOKEMON", "SUCCESS BUSCA 1 POKEMON")
                 response.body()?.let {
                     pokemon = it
                 }
